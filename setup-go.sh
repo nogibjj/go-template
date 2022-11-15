@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 #setup gorun
-go get github.com/erning/gorun
+#https://github.com/erning/gorun
+go install github.com/erning/gorun@latest
 
 #finally print go version
 go version
