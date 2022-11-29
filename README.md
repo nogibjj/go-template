@@ -1,12 +1,43 @@
 # go-template
 This is a template for building go language applications
 
+## Lesson 3:
+
+Figure out how to build out logic inside of cli (i.e. where do you put it)
+
+
 ## Lesson 2
+
+To run: `go run . --help`
+To run: `go run . version
+
 
 TO DO:
 
 * Get debugger working and learn it
 * Write a phrase repeater cli tool
+* Build a [cobra tool](https://pkg.go.dev/github.com/spf13/cobra#section-readme).  Link to [official GitHub](https://github.com/spf13/cobra)
+* Follow [getting started guide](https://github.com/spf13/cobra-cli/blob/main/README.md): 
+
+`go get -u github.com/spf13/cobra@latest`
+`import "github.com/spf13/cobra"`
+
+Install cli generator:
+`go install github.com/spf13/cobra-cli@latest`
+
+* Create a new directory:  `mkdir phrase`
+* cd into that directory: `cd phrase`
+* run go mod init <MODNAME>: `go mod init phrase`
+
+Next init something like this:
+
+```
+cd /workspaces/go-template/phrase
+cobra-cli init
+go run main.go
+```
+
+`cobra-cli init --author "Noah Gift"`
 
 ## Lesson 1
 
