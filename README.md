@@ -1,7 +1,102 @@
 # go-template
 This is a template for building go language applications
 
+
+## Lesson 4: Continue the basic tutorial
+
+https://go.dev/doc/tutorial/handle-errors
+
 ## Lesson 3:
+
+## Expanded Hello World with Modules
+
+* you'll create two modules.
+
+* `mkdir -p greetings && cd greetings`
+* `go mod init example.com/greetings`
+* `touch greetings.go` and paste in:
+* btw, you CANNOT DO THIS NO MAIN: `go run .`
+
+```go
+package greetings
+
+import "fmt"
+
+// Hello returns a greeting for the named person.
+func Hello(name string) string {
+    // Return a greeting that embeds the name in a message.
+    message := fmt.Sprintf("Hi, %v. Welcome!", name)
+    return message
+}
+```
+
+make new module
+
+* `cd ..`
+* `mkdir -p hello && cd hello`
+* `go mod init example.com/hello`
+* `touch hello.go` and paste this in:
+
+```go
+package main
+
+import (
+    "fmt"
+
+    "example.com/greetings"
+)
+
+func main() {
+    // Get a greeting message and print it.
+    message := greetings.Hello("Gladys")
+    fmt.Println(message)
+}
+```
+
+* `go mod edit -replace example.com/greetings=../greetings`
+* `go mod tidy`
+* `go run .`
+
+
+
+
+Interactive playground is amazing!:  https://go.dev/play/
+
+### Build Calc
+
+1. `mkdir -p calc && cd calc`
+2. `go mod init example/calc`
+3. `touch calc.go`
+
+```go
+// Build a calculator
+
+package main
+
+import "fmt"
+
+func main() {
+	var a, b int
+	fmt.Println("Enter two numbers: ")
+	fmt.Scan(&a, &b)
+	fmt.Println("Sum: ", a+b)
+}
+```
+
+Will build out:
+
+```bash
+@noahgift ➜ /workspaces/go-template/calc (main ✗) $ go run .
+Enter two numbers: 
+2 2
+Sum:  4
+```
+
+
+
+
+
+
 
 rehash tutorial!
 
