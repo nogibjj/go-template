@@ -3,8 +3,24 @@ This is a template for building go language applications
 
 ## Lesson 3:
 
-Figure out how to build out logic inside of cli (i.e. where do you put it)
+rehash tutorial!
 
+1. `mkdir hello && cd hello`
+2. `go mod init example/hello`
+3.  `touch hello.go`
+4.  paste this in:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+5. `go run .`
 
 ## Lesson 2
 
