@@ -1,6 +1,12 @@
 # go-template
 This is a template for building go language applications
 
+### Lesson 5:  Marco Polo Command-Line Tool using an "easy" cli library for Go
+
+cd into `marco-polo` and use `Makefile`
+
+ `./marco-polo "Marco"`
+
 
 ## Lesson 4: Continue the basic tutorial
 
