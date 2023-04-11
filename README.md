@@ -1,6 +1,21 @@
 # go-template
 This is a template for building go language applications
 
+
+### Lesson 7:  Fix the int bug!
+
+The times is not respected in the cli
+
+### Lesson 6: Making a slightly more complex Marco Polog CLI using "easy" clil library
+
+Currently not accepting the "times"
+
+* `mkdir complex-marco`
+* initialize the project structure by doing the following `go mod init github.com/<yourusername>/my-cli-tool`
+Add the urfave/cli library as a dependency:
+To add the urfave/cli library to your project, you can simply import it in your `main.go` file, and the go mod will automatically add it as a dependency:
+
+
 ### Lesson 5:  Marco Polo Command-Line Tool using an "easy" cli library for Go
 
 cd into `marco-polo` and use `Makefile`
